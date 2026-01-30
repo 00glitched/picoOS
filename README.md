@@ -12,17 +12,25 @@
 
 3 - Install pico-sdk deps
 
-```sudo apt install```
+```sudo apt install pico-sdk-deps```
+
+4 - Make it automaticly
+
+```./deps.sh``` (needs configure variable pkg_MANAGER)
 
 ### Run
 
-1 - doall.sh makes all automatically (install + build)
+1 - doall.sh makes all automatically (deps + build)
 
 ```./doall.sh```
 
 2 - only build
 
 ```./build.sh```
+
+3 - (extra) inside of .bashrc (some code-editors use it to detect libraries)
+
+```source "the/path/to/picoOS/env.sh"``` (pico-sdk path)
 
 ## Structure
 - main: bootstrap / initializer
