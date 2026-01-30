@@ -1,0 +1,2 @@
+./deps.sh
+./build.sh

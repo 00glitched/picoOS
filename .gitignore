@@ -1,0 +1,10 @@
+picoSDK.tar.gz
+pico-sdk.tar.gz
+pico-sdk/
+build/
+
+board/
+
+drivers/ds18b20.c
+drivers/ds18b20.h
+
