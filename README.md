@@ -16,7 +16,7 @@
 
 ### Run
 
-1 - doall.sh makes all automatically (install + run)
+1 - doall.sh makes all automatically (install + build)
 
 ```./doall.sh```
 

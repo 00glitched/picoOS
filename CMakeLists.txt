@@ -26,7 +26,7 @@ add_executable(nanokernel
     bin/blink.c
 )
 
-target_include_directories(nanokernel PRIVATE
+target_include_directories(pico_os PRIVATE
     .
     include
     kernel
@@ -34,6 +34,6 @@ target_include_directories(nanokernel PRIVATE
     drivers
 )
 
-target_link_libraries(nanokernel pico_stdlib hardware_timer hardware_uart)
+target_link_libraries(pico_os pico_stdlib hardware_timer hardware_uart)
 
-pico_add_extra_outputs(nanokernel)
+pico_add_extra_outputs(pico_os)

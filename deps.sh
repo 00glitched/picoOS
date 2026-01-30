@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # pico-sdk deps
 pkg_MANAGER=dnf
 $pkg_MANAGER list installed cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib || sudo $pkg_MANAGER install cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
