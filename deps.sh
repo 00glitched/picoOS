@@ -9,6 +9,8 @@ if [ -d "pico-sdk/" ]; then
     echo " pico-sdk is on dir."
 else
 
+wget "https://github.com/raspberrypi/pico-sdk/blob/master/external/pico_sdk_import.cmake"
+
 picosdk_VERSION=2.2.0
 wget -O "picoSDK.tar.gz" "https://github.com/raspberrypi/pico-sdk/releases/download/$picosdk_VERSION/pico-sdk-$picosdk_VERSION.tar.gz"
 
