@@ -6,7 +6,8 @@ $pkg_MANAGER list installed cmake python3 build-essential gcc-arm-none-eabi libn
 
 # pico-sdk
 if [ -d "pico-sdk/" ]; then
-    echo " pico-sdk is on dir."
+    cp pico-sdk/external/pico_sdk_import.cmake pico_sdk_import.cmake
+    echo "pico-sdk is on dir."
 else
 
 wget "https://github.com/raspberrypi/pico-sdk/blob/master/external/pico_sdk_import.cmake"
@@ -18,4 +19,5 @@ wget -O "picoSDK.tar.gz" "https://github.com/raspberrypi/pico-sdk/releases/downl
 tar -xf "picoSDK.tar.gz"
 rm "picoSDK.tar.gz"
 mv "pico-sdk-$picosdk_VERSION" "pico-sdk"
+cp pico-sdk/external/pico_sdk_import.cmake pico_sdk_import.cmake
 fi
