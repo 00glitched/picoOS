@@ -1,3 +1,3 @@
 # DRIVERS
-- Here is the site to put non-core drivers
+- Here is the place to put non-core drivers
 - Drivers calls HAL

@@ -1,12 +1,17 @@
-#include "pico/stdlib.h"
-#include "hal/hal.h"
-#include "bin/blink.h"
+#include "core/include/nkernel.h"
 
-int main(void) {
-    stdio_init_all();
-    hal_init();
+/* tasks externas */
+extern void blink_task(void);
+extern void term_task(void);
 
-    blink_test();
+int main(void)
+{
+    kernel_init();
 
-    while (1) { }
+    task_create(blink_task, 512);
+    task_create(term_task, 512);
+
+    scheduler_start();
+
+    while (1); // nunca debería llegar acá
 }

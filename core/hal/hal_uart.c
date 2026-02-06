@@ -10,8 +10,17 @@ void hal_uart_write(const char *s) {
     printf("%s", s);
 }
 
+void hal_uart_write_str(const char *s) {
+    hal_uart_write(s);
+}
+
 void hal_uart_write_n(const char *s, uint32_t len) {
     for (uint32_t i = 0; i < len; i++) {
         putchar_raw(s[i]);
     }
+}
+
+int hal_uart_getc(void) {
+    int c = getchar_timeout_us(0);   // no bloqueante
+    return c;                       // -1 si no hay dato
 }

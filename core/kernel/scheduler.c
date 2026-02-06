@@ -1,5 +1,4 @@
 #include <stdint.h>
-#include "nkernel.h"
 #include "scheduler.h"
 
 #define MAX_TASKS 8

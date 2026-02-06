@@ -1,8 +1,7 @@
 #include "kernel.h"
 #include "scheduler.h"
-#include "nkernel.h"
-#include "hal/hal.h"
-#include "hal/hal_timer.h"
+#include "core/hal/hal.h"
+#include "core/hal/hal_timer.h"
 
 
 volatile uint64_t nk_ticks = 0;

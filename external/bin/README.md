@@ -1,2 +1,3 @@
 # BIN
-- Here is the site to put random files that programs uses
+- Here is the place to put non-core programs
+- Programs calls drivers

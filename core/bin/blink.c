@@ -1,9 +1,9 @@
-#include "drivers/led.h"
+#include "core/drivers/led.h"
 #include "pico/stdlib.h"
 
 #define LED_PIN 25
 
-void blink_test(void) {
+void blink_task(void) {
     led_init(LED_PIN);
 
     while (1) {

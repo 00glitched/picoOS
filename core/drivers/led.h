@@ -1,3 +1,8 @@
+/* LED DRIVER
+ * HAL use: GPIO 25
+ * DSCR: control builtin LED pin
+*/
+
 #ifndef LED_H
 #define LED_H
 

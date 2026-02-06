@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include "led.h"
-#include "hal/hal_gpio.h"
+#include "core/hal/hal_gpio.h"
 
 static uint32_t led_gpio;
 

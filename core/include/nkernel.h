@@ -2,10 +2,16 @@
 #define NKERNEL_H
 
 #include <stdint.h>
+#include "core/kernel/scheduler.h"
+#include "core/kernel/kernel.h"
 
-typedef void (*task_fn_t)(void);
+/* helpers de tiempo */
+static inline uint64_t nk_now(void) {
+    return nk_ticks;
+}
 
-void task_create(task_fn_t fn, uint32_t stack_size);
-void nk_sleep_ms(uint32_t ms);
+static inline void nk_sleep_ms(uint32_t ms) {
+    scheduler_sleep(nk_ticks + ms);
+}
 
 #endif
