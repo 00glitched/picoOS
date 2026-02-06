@@ -11,19 +11,16 @@ set(CMAKE_CXX_STANDARD 17)
 
 pico_sdk_init()
 
+file(GLOB_RECURSE CORE_SRC
+    core/kernel/*.c
+    core/hal/*.c
+    core/drivers/*.c
+    core/bin/*.c
+)
+
 add_executable(pico_os
     main.c
-
-    core/kernel/kernel.c
-    kernel/scheduler.c
-
-    core/hal/hal.c
-    core/hal/hal_gpio.c
-    core/hal/hal_uart.c
-    core/hal/hal_timer.c
-
-    core/drivers/led.c
-    core/bin/blink.c
+    ${CORE_SRC}
 )
 
 target_include_directories(pico_os PRIVATE

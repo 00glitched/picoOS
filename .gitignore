@@ -4,8 +4,3 @@ pico-sdk/
 pico_sdk_import.cmake
 
 build/
-
-board/
-
-drivers/ds18b20.c
-drivers/ds18b20.h
