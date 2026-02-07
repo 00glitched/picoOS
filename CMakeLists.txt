@@ -14,7 +14,7 @@ pico_sdk_init()
 file(GLOB_RECURSE CORE_SRC
     core/kernel/*.c
     core/hal/*.c
-    core/drivers/*.c
+    core/drv/*.c
     core/bin/*.c
 )
 
@@ -28,9 +28,12 @@ target_include_directories(pico_os PRIVATE
     include
     kernel
     hal
-    drivers
+    drv
 )
 
 target_link_libraries(pico_os pico_stdlib hardware_timer hardware_uart)
+
+pico_enable_stdio_usb(pico_os 1)
+pico_enable_stdio_uart(pico_os 1)
 
 pico_add_extra_outputs(pico_os)
