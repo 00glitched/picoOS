@@ -1,6 +1,7 @@
 #include "kernel.h"
 #include "scheduler.h"
 #include "core/hal/hal.h"
+#include "core/hal/hal_uart.h"
 #include "core/hal/hal_timer.h"
 
 
@@ -13,6 +14,7 @@ static void kernel_tick(void) {
 
 void kernel_init(void) {
     hal_init();
+    hal_uart_init();
     scheduler_init();
     hal_timer_init(1000, scheduler_tick);
 }

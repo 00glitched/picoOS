@@ -1,4 +1,4 @@
-#include "core/drivers/cmd.h"
+#include "core/drv/cmd.h"
 #include "core/include/nkernel.h"
 
 static void hello_cmd(int argc, char **argv) {
