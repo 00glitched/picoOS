@@ -21,6 +21,6 @@ void hal_uart_write_n(const char *s, uint32_t len) {
 }
 
 int hal_uart_getc(void) {
-    int c = getchar_timeout_us(0);   // no bloqueante
+    int c = getchar_timeout_us(0);   // no bloqueante (0us)
     return c;                       // -1 si no hay dato
 }

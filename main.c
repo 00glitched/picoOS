@@ -1,6 +1,6 @@
 #include "core/include/nkernel.h"
 
-/* tasks externas */
+// tasks
 extern void blink_task(void);
 extern void term_task(void);
 
@@ -13,5 +13,5 @@ int main(void)
 
     scheduler_start();
 
-    while (1); // nunca debería llegar acá
+    while (1); // infinite loop
 }

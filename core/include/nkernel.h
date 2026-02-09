@@ -5,7 +5,7 @@
 #include "core/kernel/scheduler.h"
 #include "core/kernel/kernel.h"
 
-/* helpers de tiempo */
+
 static inline uint64_t nk_now(void) {
     return nk_ticks;
 }
