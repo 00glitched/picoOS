@@ -138,11 +138,11 @@ def main():
     baud      = ask("UART baudrate", 9600)
     mem_msg   = ask("MEM warn threshold (KB)", 123)
 
-    root = Path(name)
+    #root = Path(name)
 
-    write(root / "main.c", MAIN_C)
+    write("main.c", MAIN_C)
 
-    write(root / "cfg/core.h",
+    write("cfg/core.h",
           CORE_H.format(
               cores=cores,
               flash=flash,
@@ -157,7 +157,7 @@ def main():
               mem_msg=mem_msg
           ))
 
-    write(root / "CMakeLists.txt",
+    write("CMakeLists.txt",
           CMAKE.format(name=name))
 
     print("\n✔ Config.")
