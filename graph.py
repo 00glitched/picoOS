@@ -17,6 +17,7 @@ IGNORE_DIRS = {
     "external",
     "lib",
     "third_party"
+    "graphs"
 }
 
 PROJECT_ROOT = os.path.abspath(".")
